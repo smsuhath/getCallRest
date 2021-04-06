@@ -74,5 +74,10 @@ public class GetController {
 	public CourseDetails getCourseDetails(@PathVariable String courseid) {
 		return cdservice.get(courseid);
 	}
+	
+	@PostMapping("/coursedetails")
+	public void add(@RequestBody CourseDetails coursedetails) {
+		cdservice.save(coursedetails);
+	}
 
 }
