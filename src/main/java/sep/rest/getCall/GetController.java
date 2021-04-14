@@ -75,6 +75,18 @@ public class GetController {
 		return cdservice.get(courseid);
 	}
 	
+	
+	@GetMapping("coursedetails/unid")
+	public List<CourseDetails> getCourseDetailsByUniId(@RequestParam("unid") String unid){
+		return cdservice.getCourseDetailsByUniId(unid);
+	}
+	
+	@GetMapping("/coursedetails/unidanduserid")
+	public List<CourseDetails> getCourseDetailsByUniIdAndUserId(@RequestParam("unid") String unid, @RequestParam("userId") String userId ) {
+		return cdservice.getByUniIdAndUserId(unid,userId);
+	}
+	
+	
 	@PostMapping("/coursedetails")
 	public void add(@RequestBody CourseDetails coursedetails) {
 		cdservice.save(coursedetails);
