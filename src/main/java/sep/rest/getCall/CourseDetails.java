@@ -4,18 +4,33 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
+@Table(name = "course_details")
 public class CourseDetails {
 
+	@Id
 	private String courseid;
+	
+	@Column(name = "description")
 	private String description;
+	
+	@Column(name = "coursefees")
 	private float coursefees;
+	
+	@Column(name = "posturl")
 	private String posturl;
+	
+	@Column(name = "status")
 	private int status;
+	
+	@Column(name = "unid")
 	private String unid;
+	
+	@Column(name = "facid")
 	private String facid;
+	
+	@Column(name = "userid")
 	private String userid;
 
-	@Id
 	public String getCourseid() {
 		return courseid;
 	}
