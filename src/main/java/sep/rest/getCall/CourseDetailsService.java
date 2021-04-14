@@ -28,5 +28,13 @@ public class CourseDetailsService {
 	public void delete(String courseid) {
 		repo.deleteById(courseid);
 	}
+	
+	public List<CourseDetails> getCourseDetailsByUniId(String uniId) {
+		return repo.findByUniId(uniId);
+	}
+	
+	public List<CourseDetails> getByUniIdAndUserId(String uniId, String userId ) {
+		return repo.findByUniIdAndUserIdtt(uniId, userId);
+	}
 
 }
