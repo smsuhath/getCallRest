@@ -4,16 +4,27 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
+@Table(name = "university")
 public class University {
 
+	@Id
 	private String unid;
+	
+	@Column(name = "uniname")
 	private String uniname;
+	
+	@Column(name = "ranklocal")
 	private String ranklocal;
+	
+	@Column(name = "rankworld")
 	private String rankworld;
+	
+	@Column(name = "image")
 	private String image;
+	
+	@Column(name = "status")
 	private int status;
 	
-	@Id
 	public String getUnid() {
 		return unid;
 	}
