@@ -4,16 +4,27 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
+@Table(name = "user")
 public class User {
 
+	@Id
 	private String userid;
+	
+	@Column(name = "name")
 	private String name;
+	
+	@Column(name = "mobile")
 	private String mobile;
+	
+	@Column(name = "email")
 	private String email;
+	
+	@Column(name = "password")
 	private String password;
+	
+	@Column(name = "status")
 	private int status;
 
-	@Id
 	public String getUserid() {
 		return userid;
 	}
