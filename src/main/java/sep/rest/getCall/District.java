@@ -4,12 +4,15 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
+@Table(name = "district")
 public class District {
 
+	@Id
 	private String disid;
+	
+	@Column(name = "disname")
 	private String disname;
 	
-	@Id
 	public String getDisid() {
 		return disid;
 	}
