@@ -4,14 +4,21 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
+@Table(name = "faculty")
 public class Faculty {
 
+	@Id
 	private String facid;
+	
+	@Column(name = "facname")
 	private String facname;
+	
+	@Column(name = "status")
 	private int status;
+	
+	@Column(name = "disid")
 	private String disid;
 
-	@Id
 	public String getFacid() {
 		return facid;
 	}
