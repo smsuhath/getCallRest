@@ -36,5 +36,9 @@ public class CourseDetailsService {
 	public List<CourseDetails> getByUniIdAndUserId(String uniId, String userId ) {
 		return repo.findByUniIdAndUserIdtt(uniId, userId);
 	}
+	
+	public List<CourseDetails> getCourseByFees(float fees){
+		return repo.findCourseByFees(fees);
+	}
 
 }
