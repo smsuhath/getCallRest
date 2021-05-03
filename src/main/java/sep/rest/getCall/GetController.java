@@ -86,6 +86,11 @@ public class GetController {
 		return cdservice.getByUniIdAndUserId(unid,userId);
 	}
 	
+	@GetMapping("/coursedetails/coursefees")
+	public List<CourseDetails> getCourseByFees(@RequestParam("fees") float fees){
+		return cdservice.getCourseByFees(fees);
+	}
+	
 	
 	@PostMapping("/coursedetails")
 	public void add(@RequestBody CourseDetails coursedetails) {
